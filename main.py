@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import tensorflow as tf
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from tf2_yolov4.anchors import YOLOV4_ANCHORS
+from tf2_yolov4.model import YOLOv4
+
+HEIGHT, WIDTH = (640, 960)
+
+image = tf.io.read_file("./Examples/IMG_2878.PNG")
+image = tf.image.decode_image(image)
+image = tf.image.resize(image, (HEIGHT, WIDTH))
+images = tf.expand_dims(image, axis=0) / 255.0
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
