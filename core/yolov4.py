@@ -291,8 +291,9 @@ def decode_trt(conv_output, output_size, NUM_CLASS, STRIDES, ANCHORS, i=0, XYSCA
 
 def filter_boxes(box_xywh, scores, score_threshold=0.4, input_shape = tf.constant([416,416])):
     scores_max = tf.math.reduce_max(scores, axis=-1)
-
+    #scores_max = tf.math.reduce_max(scores_max, axis=0)  # New line
     mask = scores_max >= score_threshold
+    #mask = tf.repeat(tf.expand_dims(mask, 0), tf.shape(scores)[0], axis=0)  # New line
     class_boxes = tf.boolean_mask(box_xywh, mask)
     pred_conf = tf.boolean_mask(scores, mask)
     class_boxes = tf.reshape(class_boxes, [tf.shape(scores)[0], -1, tf.shape(class_boxes)[-1]])

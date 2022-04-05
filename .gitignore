@@ -5,3 +5,6 @@
 /videoResult.mp4
 /result.png
 /yolov4-416/
+/data/dataset/
+/checkpoints/
+/yolov4-ours/

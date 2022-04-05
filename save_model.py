@@ -46,7 +46,11 @@ def save_tf():
     boxes, pred_conf = filter_boxes(pred_bbox, pred_prob, score_threshold=FLAGS.score_thres, input_shape=tf.constant([FLAGS.input_size, FLAGS.input_size]))
     pred = tf.concat([boxes, pred_conf], axis=-1)
   model = tf.keras.Model(input_layer, pred)
-  utils.load_weights(model, FLAGS.weights, FLAGS.model, FLAGS.tiny)
+  if FLAGS.weights.split(".")[len(FLAGS.weights.split(".")) - 1] == "weights":
+    utils.load_weights(model, FLAGS.weights, FLAGS.model, FLAGS.tiny)
+  else:
+    model.load_weights(FLAGS.weights)
+  print('Restoring weights from: %s ... ' % FLAGS.weights)
   model.summary()
   model.save(FLAGS.output)
 
