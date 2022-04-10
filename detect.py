@@ -65,8 +65,9 @@ def main(_argv):
         infer = saved_model_loaded.signatures['serving_default']
         t1 = time.perf_counter()
         batch_data = tf.constant(images_data)
-        t2 = time.perf_counter()
         pred_bbox = infer(batch_data)
+        batch_data = tf.constant(images_data)
+        t2 = time.perf_counter()
         for key, value in pred_bbox.items():
             boxes = value[:, :, 0:4]
             pred_conf = value[:, :, 4:]
