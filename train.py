@@ -161,13 +161,13 @@ def main(_argv):
                 count += 1
                 train_step(image_data, target)
                 if (count % 1000) == 0:
-                    model.save_weights("./checkpoints/yolov4")
+                    model.save_weights("./checkpoints/yolov4-tiny")
         else:
             starttest = False
         for image_data, target in testset:
             test_step(image_data, target)
             global_tests += 1
-        model.save_weights("./checkpoints/yolov4")
+        model.save_weights("./checkpoints/yolov4-tiny")
 
 
 if __name__ == '__main__':
