@@ -2,6 +2,15 @@
 
 This project is divided into two parts, a darknet configuration section and a python/tensorflow code section.
 
+## Introduction
+
+Autonomous Vehicles with Computer Vision are great examples of Cyber- Physical Systems which depend on time-sensitive data recorded from their surrounding environment, in which real-time object detection can be crucial for decision making. 
+Effectively, our proposed project was to detect objects in nearby environments accurately without performance delays. With the addition of:
+Obtaining a smaller model which is capable enough to be used in embedded systems
+Detecting objects of different sizes and/or distances from AV
+There are many tradeoffs and factors which can affect Accuracy and Performance (FPS/Processing time).
+
+
 ## Python Tensorflow Implementation
 
 Running training from scratch:
@@ -47,10 +56,10 @@ Note that the kaggle dataset needs to be [downloaded](https://www.kaggle.com/dat
 ## Model and Results
 
 Yolov4-tiny model:
-![Yolov4-tiny](https://github.com/Dionise9/ECE884Yolo-Modified/blobv/master/DiagramFiles/yolov4-tiny-1.jpg?raw=true)
+![Yolov4-tiny](https://github.com/Dionise9/ECE884Yolo-Modified/blob/master/DiagramFiles/yolov4-tiny-1.jpg?raw=true)
 
 Our yoloV4-tinier model:
-![Yolov4-tinier](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Yolov4-tinier](https://github.com/Dionise9/ECE884Yolo-Modified/blob/master/DiagramFiles/yolov4-tinier-1.jpg?raw=true)
 
 For the udacity dataset:
 
