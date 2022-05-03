@@ -1,0 +1,7 @@
+classes= 11
+train  = ./data/udacity/train.txt
+valid = ./data/udacity/valid.txt
+names =./data/udacity/udacity.names
+backup = ./backup
+eval=coco
+

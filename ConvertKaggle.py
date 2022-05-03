@@ -29,7 +29,7 @@ last = first[0]
 fName = last.split(".")[0]
 cl,xc,yc,w,h = BndBox2YoloLine(first)
 s = str(cl) + " " + str(xc) + " " + str(yc) + " " + str(w) + " " + str(h) + "\n"
-writer = open("C:/lib/Darknet/data/Kaggle/images/"+fName+".txt", "w")
+writer = open("C:/lib/DarknetFiles/data/Kaggle/images/"+fName+".txt", "w")
 writer2 = open("./data/dataset/Kaggle/test.txt", "w")
 writer.write(s)
 writer2.write(location+last + "\n")
@@ -44,7 +44,7 @@ for line in reader:
         last = line[0]
         writer2.write(location+last + "\n")
         fName = last.split(".")[0]
-        writer = open("C:/lib/Darknet/data/Kaggle/images/" + fName + ".txt", "w")
+        writer = open("C:/lib/DarknetFiles/data/Kaggle/images/" + fName + ".txt", "w")
         writer.write(s)
         cl, xc, yc, w, h = BndBox2YoloLine(line)
         s = str(cl) + " " + str(xc) + " " + str(yc) + " " + str(w) + " " + str(h) + "\n"

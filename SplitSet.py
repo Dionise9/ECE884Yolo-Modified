@@ -2,7 +2,7 @@
 import os
 
 # assign directory
-directory = "C:/lib/Darknet/data/Udacity/export"
+directory = "C:/lib/DarknetFiles/data/Udacity/export"
 
 location = "data/Udacity/export/"
 
