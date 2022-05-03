@@ -47,7 +47,7 @@ Note that the kaggle dataset needs to be [downloaded](https://www.kaggle.com/dat
 ## Model and Results
 
 Yolov4-tiny model:
-![Yolov4-tiny](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Yolov4-tiny](https://github.com/Dionise9/ECE884Yolo-Modified/blobv/master/DiagramFiles/yolov4-tiny-1.jpg?raw=true)
 
 Our yoloV4-tinier model:
 ![Yolov4-tinier](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
